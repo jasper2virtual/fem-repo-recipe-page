@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face{
+        font-family:'Outfit';
+        src:url('./fonts/outfit/Outfit-VariableFont_wght.ttf');
+    }
+    @font-face{
+        font-family:'YoungSerif';
+        src:url('./fonts/young-serif/YoungSerif-Regular.ttf');
+    }
+
+    .text-preset-1{
+        @apply font-youngSerif font-normal text-[36px] leading-none tracking-normal;
+        @apply tablet:text-[40px];
+    }
+    .text-preset-2{
+        @apply font-youngSerif font-normal text-[28px] leading-none tracking-normal;
+    }
+    .text-preset-3{
+        @apply font-outfit font-semibold text-[20px] leading-none tracking-normal;
+    }
+    .text-preset-4{
+        @apply font-outfit font-normal text-[16px] leading-normal tracking-normal;
+    }
+    .text-preset-4-bold{
+        @extend .text-preset-4;
+        @apply font-bold;
+    }
+}
+
