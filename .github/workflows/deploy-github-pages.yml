@@ -21,7 +21,10 @@ jobs:
 
       - name: Build the project
         run: bun run build
-        
+      
+      - name: List files in dist directory
+        run: ls -R dist
+
       - name: Upload static files as artifact
         uses: actions/upload-pages-artifact@v3 
         with:
