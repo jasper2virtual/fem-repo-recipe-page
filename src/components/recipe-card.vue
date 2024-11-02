@@ -102,15 +102,15 @@ export default {
     @apply flex flex-col;
     @apply bg-white;
     @apply max-w-[763px];
-    @apply tablet:rounded-3xl;
+    @apply tablet:rounded-3xl tablet:gap-10 tablet:p-10;
 
     &>.top-image {
-        @apply tablet:rounded-t-3xl;
+        @apply tablet:rounded-xl;
     }
 
     &>.text-content {
         @apply flex flex-col gap-8;
-        @apply px-8 py-10;
+        @apply px-8 py-10 tablet:p-0;
 
 
         &>.title {
