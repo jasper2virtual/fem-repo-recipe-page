@@ -39,7 +39,7 @@
             <hr>
             <section class="instructions">
                 <header class="header">Instructions</header>
-                <ul class="list">
+                <ol class="list">
                     <li v-for="[step, detail] in arrayUnflatten([
                         'Beat the eggs', 'In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.',
                         'Heat the pan', 'Place a non-stick frying pan over medium heat and add butter or oil.',
@@ -48,11 +48,11 @@
                         'Fold and serve', 'As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.',
                         'Enjoy', 'Serve hot, with additional salt and pepper if needed.'
                     ], 2)">
-                        <span class="step">{{ step }}</span>: {{ detail }}
+                        <p class="ml-4"><span class="step">{{ step }}</span>: {{ detail }}</p>
                     </li>
-                </ul>
+                </ol>
             </section>
-<hr>
+            <hr>
             <section class="nutrition">
                 <header class="header">Nutrition</header>
                 <p>
@@ -174,7 +174,8 @@ export default {
                 @apply list-decimal flex flex-col gap-2 pl-2 text-preset-4 ml-4;
 
                 &>li {
-                    @apply marker:text-preset-4-bold text-stone-600 marker:text-brown-800;
+                    @apply  text-stone-600
+                     marker:text-brown-800 marker:text-preset-4-bold;
 
                     &>.step {
                         @apply text-preset-4-bold;
@@ -209,7 +210,8 @@ export default {
                             @apply text-brown-800 text-preset-4-bold;
                         }
                     }
-                    &>tr:not(:last-child){
+
+                    &>tr:not(:last-child) {
                         @apply border-b;
                     }
                 }
